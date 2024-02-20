@@ -1,0 +1,125 @@
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    background-color: blueviolet;
+}
+
+a {
+    font-family: Arial;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.caja {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.caja_informacion {
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+    font-family: Arial;
+    text-align: left;
+}
+
+.titulo1 {
+    font-family: Arial;
+    text-align: left;
+}
+
+.Precio {
+    font-family: Arial;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.titulo_producto {
+    font-family: Arial;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.agregar {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.agregar:hover {
+    background-color: red;
+}
+
+.imagen_producto {
+    padding-top: 0px;
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mapa-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.mapa {
+    width: 600px;
+    height: 450px;
+    border: 5px solid blueviolet;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    .caja {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .imagen_producto {
+        height: 150px;
+    }
+
+    .mapa {
+        width: 100%;
+    }
+}
+
+/* reglas para la resolucion de 768 y 1023 */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .caja {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    .titulo_producto {
+        padding: 5px;
+    }
+}
